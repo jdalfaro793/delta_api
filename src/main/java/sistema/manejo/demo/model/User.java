@@ -32,7 +32,7 @@ public class User {
     private String password;
 
     
-    private boolean status;
+    private int status;
 
     private Date registration;
     
@@ -83,11 +83,11 @@ public class User {
 		this.password = password;
 	}
 
-	public boolean isStatus() {
+	public int isStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 

@@ -22,7 +22,7 @@ CREATE TABLE [roles]
 )
 
 
-CREATE TABLE [dbo].[user_role]
+CREATE TABLE [dbo].[user_roles]
 (
     [user_id] INT NOT NULL,          -- Clave foránea hacia la tabla users
     [role_id] INT NOT NULL,          -- Clave foránea hacia la tabla roles
