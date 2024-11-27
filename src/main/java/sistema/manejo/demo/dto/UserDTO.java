@@ -1,5 +1,5 @@
 package sistema.manejo.demo.dto;
-
+ 
 public class UserDTO {
 
     private String username;

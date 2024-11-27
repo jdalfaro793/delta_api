@@ -1,5 +1,6 @@
 package sistema.manejo.demo.dto;
 
+ 
 public class RoleDTO {
 
     private String name;
@@ -18,7 +19,5 @@ public class RoleDTO {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
- 
 	
 }
