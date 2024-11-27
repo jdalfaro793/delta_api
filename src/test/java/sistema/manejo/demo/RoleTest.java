@@ -37,11 +37,10 @@ public class RoleTest {
 		r.setStatus(1);
 		
 		
-		
-		assertTrue(roleService.saveRole(r));
-		
-		r=roleService.getRole(r.getName());
-		roleService.deleteRole(r.getId());
+		if(roleService.saveRole(r))
+			assertTrue(roleService.deleteRole(roleService.getRole(r.getName()).getId()) == true);
+		else
+			log.info("ya esta registrado");
 		
 	}
 

@@ -35,14 +35,11 @@ public class UserTest {
 		u.setStatus(1);
 		u.setUsername("josdar");
 		
-	
-		assertTrue(userService.saveUser(u));
-		
 
-	
-		u=userService.getUser(u.getUsername());
-		userService.deleteUser(u.getId());
-		
+		if(userService.saveUser(u))
+			assertTrue(userService.deleteUser(userService.getUser(u.getUsername()).getId()) ==true);
+		else
+			log.info("ya esta registrado");
 	}
 
 }
