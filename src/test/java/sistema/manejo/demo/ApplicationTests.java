@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@SpringBootTest(classes = {DeltaApplication.class})
+@SpringBootTest(classes = {Application.class})
 @RunWith(SpringRunner.class)
-public class DeltaApplicationTests {
-	private static final Logger log = LoggerFactory.getLogger(DeltaApplicationTests.class);
+public class ApplicationTests {
+	private static final Logger log = LoggerFactory.getLogger(ApplicationTests.class);
 
 	@Test
 	public void contextLoads() {

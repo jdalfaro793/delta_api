@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import sistema.manejo.demo.model.User;
 import sistema.manejo.demo.service.UserService;
 
-@SpringBootTest(classes = {DeltaApplication.class})
+@SpringBootTest(classes = {Application.class})
 @RunWith(SpringRunner.class)
 public class UserTest {
 	private static final Logger log = LoggerFactory.getLogger(UserTest.class);
