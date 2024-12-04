@@ -1,8 +1,8 @@
 package sistema.manejo.demo.model;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -21,35 +21,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-
     private String username;
-
-
     private String email;
-
-    
     private String password;
-
-    
     private int status;
-
     private Date registration;
-    
     private Date modification;
     
-    
-    
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "user_roles",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
-    private Set<Role> roles = new HashSet<>();
-
-    
-    
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<Role> roles = new ArrayList<>();
     
 	public int getId() {
 		return id;
@@ -83,7 +64,7 @@ public class User {
 		this.password = password;
 	}
 
-	public int isStatus() {
+	public int getStatus() {
 		return status;
 	}
 
@@ -91,13 +72,13 @@ public class User {
 		this.status = status;
 	}
 
-	public Set<Role> getRoles() {
-		return roles;
-	}
+    public List<Role> getRoles() {
+        return roles;
+    }
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
-	}
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
 
 	public Date getModification() {
 		return modification;

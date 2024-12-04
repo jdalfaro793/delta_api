@@ -33,6 +33,15 @@ public class UserService implements UserDetailsService {
 		return userRepository.findByUsername(username);
 	}
 	
+	public User findUserId(int userid) throws Exception {
+	    Optional<User> userOptional = userRepository.findById(userid);
+	    if (userOptional.isPresent()) {
+	        return userOptional.get();
+	    }
+	    return null;
+	}
+	
+	
 	public boolean deleteUser(Integer userid) throws Exception {
 	    Optional<User> userOptional = userRepository.findById(userid);
 
